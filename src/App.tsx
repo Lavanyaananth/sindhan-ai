@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Sidebar } from "@/components/layout/Sidebar";
+import { Conversation } from "@/components/layout/Conversation";
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white">
-      <Button className="text-4xl font-bold">Welcome to SindhanAI 🚀</Button>
-    </main>
+    <div className="flex h-screen">
+      <Sidebar></Sidebar>
+      <Conversation></Conversation>
+    </div>
   );
 }
 
