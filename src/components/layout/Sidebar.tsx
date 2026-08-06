@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { CircleUserRound } from "lucide-react";
 export function Sidebar() {
   return (
-    <aside className="w-64 h-full flex flex-col border-r">
+    <aside className="w-64 h-full flex flex-col border-r p-2">
       <Logo className="h-8 w-8" />
       <Button>New chat</Button>
       <nav className="mt-auto">
