@@ -1,69 +1,184 @@
-# React + TypeScript + Vite
+Absolutely. I’d make the README much cleaner — more like a **project roadmap + development log**, rather than a tutorial.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sindhan AI
 
-Currently, two official plugins are available:
+A ChatGPT-inspired AI assistant built with **React, TypeScript, Tailwind CSS, Vite, and Google Gemini**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Status:** 🚧 In active development
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[Sindhan AI](https://sindhan-ai-phi.vercel.app/)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## GitHub
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+[Lavanyaananth/sindhan-ai](https://github.com/Lavanyaananth/sindhan-ai)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Google Gemini API
+- Vercel Serverless Functions
+- Git & GitHub
+
+---
+
+## Project Goals
+
+- Build an AI-powered frontend application from scratch
+- Explore modern AI interface patterns
+- Practice React and TypeScript architecture
+- Understand client–server API communication
+- Implement asynchronous AI interactions
+- Explore streaming responses and long-running AI tasks
+- Build incrementally with small, testable milestones
+
+---
+
+# Development Progress
+
+## Phase 1 — Project Setup
+
+- [x] Create React + TypeScript + Vite project
+- [x] Configure Tailwind CSS
+- [x] Configure ESLint
+- [x] Set up project structure
+- [x] Initialize Git repository
+- [x] Push project to GitHub
+- [x] Deploy to Vercel
+
+## Phase 2 — Static Chat Interface
+
+- [x] Build application layout
+- [x] Create sidebar/navigation
+- [x] Build chat interface
+- [x] Create message components
+- [x] Add chat input and Send button
+- [x] Style interface with Tailwind CSS
+
+---
+
+# Milestone 1 — Basic AI Chat
+
+**Goal:** Connect the static chat interface to Gemini and display AI responses.
+
+### Tasks
+
+- [ ] Add input state
+- [ ] Add messages state
+- [ ] Implement local user message handling
+- [ ] Create `/api/chat` serverless endpoint
+- [ ] Configure Gemini API
+- [ ] Add environment variable for API key
+- [ ] Connect React to `/api/chat`
+- [ ] Display Gemini response
+- [ ] Add loading state
+- [ ] Add error handling
+- [ ] Test API flow
+- [ ] Commit changes
+- [ ] Deploy updated version to Vercel
+
+### Target Flow
+
+```text
+User Input
+    ↓
+React
+    ↓
+/api/chat
+    ↓
+Gemini API
+    ↓
+AI Response
+    ↓
+Chat UI
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Future Milestones
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Milestone 2 — Conversation History
+
+- [ ] Maintain conversation history
+- [ ] Send relevant conversation context to Gemini
+- [ ] Improve message state management
+
+## Milestone 3 — Streaming Responses
+
+- [ ] Implement Gemini streaming
+- [ ] Display response progressively
+- [ ] Handle streaming loading/error states
+- [ ] Handle cancellation/retry
+
+## Milestone 4 — Rich AI Responses
+
+- [ ] Markdown rendering
+- [ ] Code block rendering
+- [ ] Tables and lists
+- [ ] Safe HTML/Markdown handling
+
+## Milestone 5 — Advanced AI UX
+
+- [ ] Tool-call visualization
+- [ ] Long-running task states
+- [ ] Progress indicators
+- [ ] Approval/confirmation flows
+- [ ] Retry and cancellation states
+
+---
+
+# Engineering Focus
+
+This project is being used to explore:
+
+- React component architecture
+- TypeScript
+- State management
+- Async API interactions
+- Client/server boundaries
+- AI-generated content rendering
+- Loading, empty, and error states
+- Streaming AI responses
+- Complex AI task UX
+- Accessibility
+- Production-oriented frontend patterns
+
+---
+
+# Development Approach
+
+The project is intentionally being built incrementally.
+
+```text
+Setup
+  ↓
+Static UI
+  ↓
+Basic AI interaction
+  ↓
+Conversation history
+  ↓
+Streaming
+  ↓
+Rich AI responses
+  ↓
+Advanced AI task UX
 ```
+
+Each milestone is implemented, tested, committed, and deployed before moving to the next stage.
+
+---
+
+## Current Status
+
+🚧 **Milestone 1 — Basic AI Chat**
+
+Currently working toward:
+
+**User types → API call → Gemini response → response displayed in chat**
