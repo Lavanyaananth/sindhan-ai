@@ -13,18 +13,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
   try {
     //message type check
-    const { message } = await req.body;
+    const { message } = req.body;
     if (!message || typeof message !== "string") {
       return res.status(400).json({
         error: "Message is required",
       });
     }
+    console.log("1. API function started");
+
+    console.log("2. Request body:", req.body);
+
+    console.log("3. Calling Gemini...");
     //sending messages to gemini and API response
-    const response = await ai.models.generateContent({
-      model: "gemini-3.6-flash",
-      contents: message,
-    });
-    return Response.json({
+    const response = await Promise.race([
+      ai.models.generateContent({
+        model: "gemini-3.8-flash",
+        contents: message,
+      }),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("Gemini request timed out")), 15000),
+      ),
+    ]);
+    console.log("4. Gemini responded");
+    return res.status(200).json({
       reply: response.text,
     });
   } catch (error) {
