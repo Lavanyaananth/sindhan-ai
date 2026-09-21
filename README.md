@@ -4,7 +4,7 @@ Absolutely. I’d make the README much cleaner — more like a **project roadmap
 
 A ChatGPT-inspired AI assistant built with **React, TypeScript, Tailwind CSS, Vite, and Google Gemini**.
 
-> **Status:** 🚧 In active development
+> **Status:** In active development
 
 ## Live Demo
 
@@ -177,7 +177,7 @@ Each milestone is implemented, tested, committed, and deployed before moving to 
 
 ## Current Status
 
-🚧 **Milestone 1 — Basic AI Chat**
+**Milestone 1 — Basic AI Chat**
 
 Currently working toward:
 
