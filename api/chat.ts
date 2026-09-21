@@ -25,15 +25,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     console.log("3. Calling Gemini...");
     //sending messages to gemini and API response
-    const response = await Promise.race([
-      ai.models.generateContent({
-        model: "gemini-3.8-flash",
-        contents: message,
-      }),
-      new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("Gemini request timed out")), 15000),
-      ),
-    ]);
+    const response = await ai.models.generateContent({
+      model: "gemini-3.8-flash",
+      contents: message,
+    });
     console.log("4. Gemini responded");
     return res.status(200).json({
       reply: response.text,
