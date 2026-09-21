@@ -1,18 +1,24 @@
-import { Message } from "@/components/chat/Message";
 import type { ChatMessage } from "@/types/chat";
 interface ConversationProps {
   messages: ChatMessage[];
 }
 export function Conversation({ messages }: ConversationProps) {
   return (
-    <main className="flex flex-1 flex-col overflow-y-auto px-6 py-6 ">
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-4">
+    <div className="flex-1 overflow-y-auto p-6">
+      <div className="mx-auto max-w-3xl space-y-4">
         {messages.map((message) => (
-          <Message key={message.id} message={message}></Message>
+          <div
+            key={message.id}
+            className={
+              message.role === "user"
+                ? "ml-auto max-w-[80%] rounded-lg bg-black p-3 text-white"
+                : "max-w-[80%] rounded-lg bg-gray-100 p-3 text-black"
+            }
+          >
+            {message.content}
+          </div>
         ))}
-
-        <div className="mx-auto mt-6 w-full max-w-3xl"></div>
       </div>
-    </main>
+    </div>
   );
 }
