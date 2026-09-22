@@ -1,4 +1,3 @@
-Absolutely. I’d make the README much cleaner — more like a **project roadmap + development log**, rather than a tutorial.
 
 # Sindhan AI
 
