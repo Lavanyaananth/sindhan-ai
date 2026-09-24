@@ -7,13 +7,7 @@ export function Sidebar() {
       <Logo className="h-8 w-8" />
       <Button>New chat</Button>
       <nav className="mt-auto">
-        <p className="font-medium"> Recent chats </p>
-        <ul className="flex flex-col gap-2 mb-4">
-          <li>Explain react</li>
-          <li>What is GPT?</li>
-          <li>Explain Gemini API</li>
-        </ul>
-        <button className="border w-full p-3 rounded-2xl transition-colors flex items-center gap-3 hover:bg-accent">
+        <button className="border w-full transition-colors flex items-center gap-3 hover:bg-accent">
           <CircleUserRound className="h-10 w-10"></CircleUserRound>
           <div>
             <p>Test user</p>

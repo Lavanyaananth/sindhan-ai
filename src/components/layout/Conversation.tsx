@@ -11,8 +11,8 @@ export function Conversation({ messages }: ConversationProps) {
             key={message.id}
             className={
               message.role === "user"
-                ? "ml-auto max-w-[80%] rounded-lg bg-black p-3 text-white"
-                : "max-w-[80%] rounded-lg bg-gray-100 p-3 text-black"
+                ? "ml-auto w-fit max-w-[80%] rounded-lg bg-black p-3 text-white"
+                : "max-w-[80%] w-fit rounded-lg bg-gray-100 p-3 text-black"
             }
           >
             {message.content}
